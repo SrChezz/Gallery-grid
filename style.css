@@ -1,0 +1,48 @@
+body {
+    background: rgb(19, 19, 19);
+    color: #fff;
+    font-family: 'Staatliches', cursive;
+}
+
+.main-title {
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.gallery-grid {
+    margin: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    grid-auto-rows: minmax(250px, auto);
+}
+
+.gallery-grid > .image {
+    border: 1px solid #333;
+}
+
+
+
+.image {  
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border-radius: 4px;
+    transition: all 500ms;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+  
+.image:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+ }
+
+@media screen and (min-width: 600px) {
+    .image-tall {
+      grid-row: span 2 / auto;
+    }
+  
+    .image-wide {
+      grid-column: span 2 / auto;
+    }
+  }
